@@ -4,7 +4,7 @@ describe '#dna_transcription' do
   it 'returns an Array' do
     expect(dna_transcription(['C', 'G', 'T', 'A'])).to be_a(Array)
   end
-
+  
   it "returns the correct RNA sequence for ['C','G','T','A']" do
     expect(dna_transcription(['C', 'G', 'T', 'A'])).to eq(['G', 'C', 'A', 'U'])
   end

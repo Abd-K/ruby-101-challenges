@@ -6,5 +6,9 @@ SCRABBLE_POINTS = { "A"=>1, "B"=>3, "C"=>3, "D"=>2,
 
 def scrabble_counter(sentence)
   # TODO: return the total number of points based on the hash above
-
+  sum = 0
+  for letter in sentence.gsub(/\s+/, "").chars
+      sum = sum + SCRABBLE_POINTS[letter.capitalize]
+  end
+  return sum
 end

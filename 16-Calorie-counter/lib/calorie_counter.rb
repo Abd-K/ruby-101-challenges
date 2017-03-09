@@ -17,5 +17,16 @@ MEALS = {
 
 def calorie_counter(order)
   # TODO: calculate the total amount of calories for the order
+   sum = 0
 
+
+  for order_index in order
+  if(MEALS[order_index])
+    for meals_index in MEALS[order_index]
+      sum = sum + CALORIES[meals_index].to_i
+    end
+  end
+   sum = sum + CALORIES[order_index].to_i
+  end
+  return sum
 end
